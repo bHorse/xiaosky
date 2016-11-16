@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- 各属性的配置 -->
+		<!-- 为true表示将Hibernate发送给数据库的sql显示出来 -->
+		<property name="show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+		<!-- SQL方言，这边设定的是MySQL -->
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<!-- <property name="hibernate.current_session_context_class">thread</property> -->
+		<!--映射文件 -->
+		<mapping class="com.xiaosky.entity.User" />
+		
+	</session-factory>
+</hibernate-configuration>
